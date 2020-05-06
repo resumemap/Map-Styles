@@ -1,218 +1,37 @@
 {
-    "version": 8,
-    "name": "Basic",
-    "metadata": {
-        "mapbox:type": "default",
-        "mapbox:origin": "basic-v1",
-        "mapbox:sdk-support": {
-            "js": "1.9.0",
-            "android": "8.6.0",
-            "ios": "5.6.0"
-        },
-        "mapbox:autocomposite": true,
-        "mapbox:groups": {
-            "Land & water, land": {
-                "name": "Land & water, land",
-                "collapsed": false
-            },
-            "Land & water, water": {
-                "name": "Land & water, water",
-                "collapsed": false
-            },
-            "Land & water, built": {
-                "name": "Land & water, built",
-                "collapsed": false
-            },
-            "Transit, built": {"name": "Transit, built", "collapsed": false},
-            "Buildings, built": {
-                "name": "Buildings, built",
-                "collapsed": false
-            },
-            "Walking, cycling, etc., tunnels": {
-                "name": "Walking, cycling, etc., tunnels",
-                "collapsed": false
-            },
-            "Road network, tunnels": {
-                "name": "Road network, tunnels",
-                "collapsed": false
-            },
-            "Walking, cycling, etc., surface": {
-                "name": "Walking, cycling, etc., surface",
-                "collapsed": false
-            },
-            "Road network, surface": {
-                "name": "Road network, surface",
-                "collapsed": false
-            },
-            "Walking, cycling, etc., barriers-bridges": {
-                "name": "Walking, cycling, etc., barriers-bridges",
-                "collapsed": false
-            },
-            "Road network, bridges": {
-                "name": "Road network, bridges",
-                "collapsed": false
-            },
-            "Administrative boundaries, admin": {
-                "name": "Administrative boundaries, admin",
-                "collapsed": false
-            },
-            "Road network, road-labels": {
-                "name": "Road network, road-labels",
-                "collapsed": false
-            },
-            "Walking, cycling, etc., walking-cycling-labels": {
-                "name": "Walking, cycling, etc., walking-cycling-labels",
-                "collapsed": false
-            },
-            "Natural features, natural-labels": {
-                "name": "Natural features, natural-labels",
-                "collapsed": false
-            },
-            "Point of interest labels, poi-labels": {
-                "name": "Point of interest labels, poi-labels",
-                "collapsed": false
-            },
-            "Transit, transit-labels": {
-                "name": "Transit, transit-labels",
-                "collapsed": false
-            },
-            "Place labels, place-labels": {
-                "name": "Place labels, place-labels",
-                "collapsed": false
-            }
-        },
-        "mapbox:decompiler": {
-            "id": "basic-v1",
-            "componentVersion": "2.0.0",
-            "strata": [
-                {
-                    "id": "basic-v1",
-                    "order": [
-                        ["land-and-water", "land"],
-                        ["land-and-water", "water"],
-                        ["land-and-water", "built"],
-                        ["transit", "built"],
-                        ["buildings", "built"],
-                        ["road-network", "tunnels-case"],
-                        ["walking-cycling", "tunnels"],
-                        ["road-network", "tunnels"],
-                        ["transit", "ferries"],
-                        ["walking-cycling", "surface"],
-                        ["road-network", "surface"],
-                        ["transit", "surface"],
-                        ["road-network", "surface-icons"],
-                        ["walking-cycling", "barriers-bridges"],
-                        ["road-network", "bridges"],
-                        ["transit", "bridges"],
-                        ["road-network", "traffic-and-closures"],
-                        ["buildings", "extruded"],
-                        ["transit", "elevated"],
-                        ["admin-boundaries", "admin"],
-                        ["buildings", "building-labels"],
-                        ["road-network", "road-labels"],
-                        ["walking-cycling", "walking-cycling-labels"],
-                        ["transit", "ferry-aerialway-labels"],
-                        ["natural-features", "natural-labels"],
-                        ["point-of-interest-labels", "poi-labels"],
-                        ["transit", "transit-labels"],
-                        ["place-labels", "place-labels"]
-                    ]
-                }
-            ],
-            "components": {
-                "road-network": "2.0.0",
-                "natural-features": "2.0.0",
-                "place-labels": "2.0.0",
-                "admin-boundaries": "2.0.0",
-                "point-of-interest-labels": "2.0.0",
-                "walking-cycling": "2.0.0",
-                "transit": "2.0.0",
-                "land-and-water": "2.0.0",
-                "buildings": "2.0.0"
-            },
-            "propConfig": {
-                "road-network": {
-                    "color-base": "hsl(40, 48%, 92%)",
-                    "color-road": "hsl(38, 55%, 100%)",
-                    "roadNetwork": "Simple"
-                },
-                "natural-features": {
-                    "color-base": "hsl(40, 48%, 92%)",
-                    "color-water": "hsl(205, 76%, 70%)",
-                    "color-poi": "hsl(26, 20%, 38%)"
-                },
-                "place-labels": {
-                    "color-base": "hsl(40, 48%, 92%)",
-                    "color-place-label": "hsl(0, 0%, 15%)",
-                    "settlementSubdivisionsDensity": 3,
-                    "settlementLabelStyle": "Text only"
-                },
-                "admin-boundaries": {
-                    "color-base": "hsl(40, 48%, 92%)",
-                    "color-place-label": "hsl(0, 0%, 15%)"
-                },
-                "point-of-interest-labels": {
-                    "color-base": "hsl(40, 48%, 92%)",
-                    "color-greenspace": "hsl(78, 50%, 73%)",
-                    "color-greenspace-label": "hsl(76, 50%, 16%)",
-                    "color-hospital": "hsl(3, 45%, 55%)",
-                    "color-school": "hsl(40, 45%, 45%)",
-                    "color-poi": "hsl(26, 20%, 38%)",
-                    "density": 2
-                },
-                "walking-cycling": {
-                    "color-base": "hsl(40, 48%, 92%)",
-                    "color-road": "hsl(38, 55%, 100%)",
-                    "color-greenspace": "hsl(78, 50%, 73%)",
-                    "color-greenspace-label": "hsl(76, 50%, 16%)",
-                    "walkingCyclingPisteBackground": false,
-                    "golfHoleLabelLine": false,
-                    "pedestrianPolygonFeatures": false
-                },
-                "transit": {
-                    "color-airport": "hsl(225, 4%, 40%)",
-                    "color-transit": "hsl(345, 6%, 40%)",
-                    "aerialways": false,
-                    "color-road": "hsl(38, 55%, 100%)",
-                    "color-water": "hsl(205, 76%, 70%)",
-                    "transitLabels": false,
-                    "railways": false,
-                    "ferries": false,
-                    "color-base": "hsl(40, 48%, 92%)"
-                },
-                "land-and-water": {
-                    "color-airport": "hsl(225, 4%, 40%)",
-                    "color-hospital": "hsl(3, 45%, 55%)",
-                    "landcover": false,
-                    "color-greenspace": "hsl(78, 50%, 73%)",
-                    "color-water": "hsl(205, 76%, 70%)",
-                    "transitionLandOnZoom": false,
-                    "waterStyle": "Simple",
-                    "color-base": "hsl(40, 48%, 92%)",
-                    "color-school": "hsl(40, 45%, 45%)"
-                },
-                "buildings": {
-                    "color-base": "hsl(40, 48%, 92%)",
-                    "houseNumbers": false
-            },
-            "mapbox:type": "template",
+  "version": 8,
+  "name": "Bright",
+  "metadata": {
+    "mapbox:autocomposite": false,
+    "mapbox:groups": {
+      "1444849242106.713": {"collapsed": false, "name": "Places"},
+      "1444849334699.1902": {"collapsed": true, "name": "Bridges"},
+      "1444849345966.4436": {"collapsed": false, "name": "Roads"},
+      "1444849354174.1904": {"collapsed": true, "name": "Tunnels"},
+      "1444849364238.8171": {"collapsed": false, "name": "Buildings"},
+      "1444849382550.77": {"collapsed": false, "name": "Water"},
+      "1444849388993.3071": {"collapsed": false, "name": "Land"}
+    },
+    "mapbox:type": "template",
     "openmaptiles:mapbox:owner": "openmaptiles",
     "openmaptiles:mapbox:source:url": "mapbox://openmaptiles.4qljc88t",
     "openmaptiles:version": "3.x"
-    },
-    "center": [2.3176, 48.8665],
-    "zoom": 12,
-    "sources": {
- "openmaptiles": {
+  },
+  "center": [0, 0],
+  "zoom": 1,
+  "bearing": 0,
+  "pitch": 0,
+  "sources": {
+    "openmaptiles": {
       "type": "vector",
-      "url": "https://api.maptiler.com/tiles/v3/tiles.json?key=WL8qzCSpDbfKKNsGuOG3"
+      "url": "https://api.maptiler.com/tiles/v3/tiles.json?key={key}"
     }
   },
-    "sprite": "https://openmaptiles.github.io/osm-bright-gl-style/sprite",
-    "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=WL8qzCSpDbfKKNsGuOG3",
-    "layers": [
-        {
-            "id": "background",
+  "sprite": "https://openmaptiles.github.io/osm-bright-gl-style/sprite",
+  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
+  "layers": [
+    {
+      "id": "background",
             "type": "background",
             "paint": {"background-color": "hsl(0, 0%, 100%)"}
         },
@@ -359,6 +178,8 @@
                 "line-opacity": {
                     "base": 1,
                     "stops": [[0, 0], [12, 0.5], [22, 1]]
+                }
+            }
         },
         {
             "id": "road-Small-tunnel",
@@ -387,6 +208,7 @@
                     "stops": [[0, 0], [12, 0.5], [22, 1]]
                 },
                 "line-dasharray": [1, 2, 1]
+            }
         },
         {
             "id": "Rails",
@@ -427,9 +249,4 @@
             "filter": [">=", "admin_level", 3],
             "layout": {},
             "paint": {"line-dasharray": [1, 2, 1]}
-        },
-            "paint": {
-                "text-color": "hsl(0, 0%, 0%)",
-                "text-halo-color": "hsl(0, 0%, 100%)",
-                "text-halo-width": 2
-            }
+        }
