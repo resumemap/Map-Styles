@@ -183,31 +183,17 @@
         },
         "buildings": {"color-base": "hsl(40, 48%, 92%)", "houseNumbers": false}
       }
-    },
-    "maputnik:renderer": "mbgljs"
   },
   "center": [2.3176, 48.8665],
   "zoom": 12,
   "sources": {
-    "mapbox://mapbox.mapbox-traffic-v1": {
-      "url": "mapbox://mapbox.mapbox-traffic-v1",
-      "type": "vector"
-    },
-    "mapbox://mapbox.mapbox-incidents-v1": {
-      "url": "mapbox://mapbox.mapbox-incidents-v1",
-      "type": "vector"
-    },
     "composite": {
-      "url": "mapbox://mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v8",
-      "type": "vector"
-    },
-    "Maptiler": {
       "type": "vector",
       "url": "https://api.maptiler.com/tiles/v3/tiles.json?key=WL8qzCSpDbfKKNsGuOG3"
     }
   },
-  "sprite": "mapbox://sprites/maperr/ck9im8gaq2e541io0tdrhzrei/ai6d375m2mufwgqjzdah90j62",
-  "glyphs": "mapbox://fonts/maperr/{fontstack}/{range}.pbf",
+  "sprite": "https://openmaptiles.github.io/osm-bright-gl-style/sprite",
+  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=WL8qzCSpDbfKKNsGuOG3",
   "layers": [
     {
       "id": "background",
@@ -1777,11 +1763,3 @@
         "line-width": ["interpolate", ["linear"], ["zoom"], 3, 0.5, 10, 2]
       }
     }
-  ],
-  "created": "2020-04-27T15:07:40.043Z",
-  "id": "ck9im8gaq2e541io0tdrhzrei",
-  "modified": "2020-04-27T15:07:40.043Z",
-  "owner": "maperr",
-  "visibility": "private",
-  "draft": false
-}
