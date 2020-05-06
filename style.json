@@ -1,30 +1,24 @@
 {
-  "version": 8,
-  "name": "Bright",
-  "metadata": {
-    "mapbox:autocomposite": false,
-    "mapbox:groups": {
-      "1444849242106.713": {"collapsed": false, "name": "Places"},
-      "1444849334699.1902": {"collapsed": true, "name": "Bridges"},
-      "1444849345966.4436": {"collapsed": false, "name": "Roads"},
-      "1444849354174.1904": {"collapsed": true, "name": "Tunnels"},
-      "1444849364238.8171": {"collapsed": false, "name": "Buildings"},
-      "1444849382550.77": {"collapsed": false, "name": "Water"},
-      "1444849388993.3071": {"collapsed": false, "name": "Land"}
-    },
-    "mapbox:type": "template",
-    "openmaptiles:mapbox:owner": "openmaptiles",
-    "openmaptiles:mapbox:source:url": "mapbox://descentas.70bfa887",
-    "openmaptiles:version": "3.x"
-  },
-  "center": [0, 0],
-  "zoom": 1,
-  "bearing": 0,
-  "pitch": 0,
-  "sources": {
-    "openmaptiles": {
-      "type": "vector",
-      "url": "https://api.maptiler.com/tiles/v3/tiles.json?key={key}"
+    "created": 1489700939356,
+    "description": "YourOwnMaps Light",
+    "filesize": 6041,
+    "format": "png8:m=h",
+    "id": "descentas.eaae3d28",
+    "mapbox_logo": true,
+    "maxzoom": 22,
+    "minzoom": 0,
+    "modified": 1489700939026,
+    "name": "light",
+    "private": false,
+    "scheme": "xyz",
+    "source": "mapbox:///mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v5",
+    "tilejson": "2.2.0",
+    "tiles": [
+        "https://a.tiles.mapbox.com/v4/descentas.eaae3d28/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGVzY2VudGFzIiwiYSI6ImNpejJuOWV5ZDA0N2UzMnBnY29ybGl2MzMifQ.V07Bcwh1-mdDgh83IRKFVQ",
+        "https://b.tiles.mapbox.com/v4/descentas.eaae3d28/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiZGVzY2VudGFzIiwiYSI6ImNpejJuOWV5ZDA0N2UzMnBnY29ybGl2MzMifQ.V07Bcwh1-mdDgh83IRKFVQ"
+    ],
+    "version": "1.0.0",
+    "webpage": "https://a.tiles.mapbox.com/v4/descentas.eaae3d28/page.html?access_token=pk.eyJ1IjoiZGVzY2VudGFzIiwiYSI6ImNpejJuOWV5ZDA0N2UzMnBnY29ybGl2MzMifQ.V07Bcwh1-mdDgh83IRKFVQ"
     }
   },
   "sprite": "https://openmaptiles.github.io/osm-bright-gl-style/sprite",
