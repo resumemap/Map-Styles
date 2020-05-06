@@ -214,8 +214,8 @@
             "type": "vector"
         }
     },
-    "sprite": "mapbox://sprites/maperr/ck9u5gz8p06k81ipb7gbu8mxe/ai6d375m2mufwgqjzdah90j62",
-    "glyphs": "mapbox://fonts/maperr/{fontstack}/{range}.pbf",
+    "sprite": "https://openmaptiles.github.io/osm-bright-gl-style/sprite",
+    "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key={key}",
     "layers": [
         {
             "id": "background",
