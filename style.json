@@ -202,15 +202,15 @@
     "zoom": 12,
     "sources": {
         "mapbox://mapbox.mapbox-traffic-v1": {
-            "url": "mapbox://mapbox.mapbox-traffic-v1",
+            "url": "https://api.maptiler.com/tiles/v3/tiles.json?key=WL8qzCSpDbfKKNsGuOG3",
             "type": "vector"
         },
         "mapbox://mapbox.mapbox-incidents-v1": {
-            "url": "mapbox://mapbox.mapbox-incidents-v1",
+            "url": "https://api.maptiler.com/tiles/v3/tiles.json?key=WL8qzCSpDbfKKNsGuOG3",
             "type": "vector"
         },
         "composite": {
-            "url": "mapbox://mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v8",
+            "url": "https://api.maptiler.com/tiles/v3/tiles.json?key=WL8qzCSpDbfKKNsGuOG3",
             "type": "vector"
         }
     },
