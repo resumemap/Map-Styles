@@ -132,8 +132,8 @@
         },
         "mapbox:uiParadigm": "layers"
     },
-    "center": [-73.82859160254796, 40.682035357773174],
-    "zoom": 13.890630259524563,
+    "center": [-99.10336009041485, 19.42018986250889],
+    "zoom": 11.051559875070426,
     "bearing": 0,
     "pitch": 0,
     "sources": {
@@ -496,7 +496,7 @@
                     12,
                     0.8,
                     22,
-                    14
+                    15
                 ],
                 "line-color": "hsl(170, 23%, 21%)"
             }
@@ -590,7 +590,7 @@
         }
     ],
     "created": "2020-12-15T18:21:09.662Z",
-    "modified": "2021-03-18T13:23:17.871Z",
+    "modified": "2021-03-18T13:34:32.474Z",
     "id": "ckiqbawzv1cuz17qcwgmwcs8o",
     "owner": "pulmap",
     "visibility": "private",
