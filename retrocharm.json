@@ -636,12 +636,13 @@
                     0.1,
                     22,
                     0.75
-                ]
+                ],
+                "line-color": "#29423e"
             }
         }
     ],
     "created": "2021-06-10T08:28:59.495Z",
-    "modified": "2021-12-14T14:32:03.232Z",
+    "modified": "2021-12-14T14:34:33.847Z",
     "id": "ckpqn35qu0yjt17o4r5udtydn",
     "owner": "pulmap",
     "visibility": "private",
