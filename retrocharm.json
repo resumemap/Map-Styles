@@ -132,8 +132,8 @@
         },
         "mapbox:uiParadigm": "layers"
     },
-    "center": [-73.98671956171093, 40.736234562905935],
-    "zoom": 14.01596877358798,
+    "center": [-83.1472768600173, 9.926450305482561],
+    "zoom": 7.070313375773091,
     "bearing": 0,
     "pitch": 0,
     "sources": {
@@ -143,7 +143,7 @@
         }
     },
     "sprite": "mapbox://sprites/pulmap/ckpqn35qu0yjt17o4r5udtydn/draft",
-    "glyphs": "mapbox://fonts/pulmap/{fontstack}/{range}.pbf",
+    "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
     "layers": [
         {
             "id": "background",
@@ -613,10 +613,25 @@
                     3.8
                 ]
             }
+        },
+        {
+            "id": "admin",
+            "type": "line",
+            "source": "composite",
+            "source-layer": "admin",
+            "filter": [
+                "all",
+                ["==", ["get", "admin_level"], 0],
+                ["==", ["get", "disputed"], "false"],
+                ["==", ["get", "maritime"], "false"],
+                ["match", ["get", "worldview"], ["all", "US"], true, false]
+            ],
+            "layout": {},
+            "paint": {"line-color": "hsl(170, 23%, 21%)"}
         }
     ],
     "created": "2021-06-10T08:28:59.495Z",
-    "modified": "2021-06-10T21:03:34.475Z",
+    "modified": "2021-12-14T14:25:58.878Z",
     "id": "ckpqn35qu0yjt17o4r5udtydn",
     "owner": "pulmap",
     "visibility": "private",
