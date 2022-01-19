@@ -95,7 +95,7 @@
             "paint": {"fill-color": "#a8daec", "fill-translate": [0, 0]}
         },
         {
-            "id": "water copy",
+            "id": "water outline",
             "type": "line",
             "source": "composite",
             "source-layer": "water",
@@ -260,7 +260,7 @@
             "paint": {
                 "fill-color": "rgba(191,224,201,1)",
                 "fill-pattern": "grey_pattern-dots",
-                "fill-opacity": 0.45
+                "fill-opacity": 0.5
             }
         },
         {
@@ -324,7 +324,7 @@
             "paint": {
                 "fill-color": "hsl(206, 98%, 33%)",
                 "fill-pattern": "grey_pattern-dots",
-                "fill-opacity": 0.58
+                "fill-opacity": 0.5
             }
         },
         {
@@ -343,6 +343,7 @@
             "source": "composite",
             "source-layer": "landuse",
             "filter": ["match", ["get", "class"], ["grass"], true, false],
+            "layout": {"visibility": "none"},
             "paint": {
                 "fill-color": "hsl(150, 19%, 54%)",
                 "fill-opacity": 0.35,
@@ -872,7 +873,7 @@
                     12,
                     0.3,
                     22,
-                    3.5
+                    2.5
                 ]
             }
         },
@@ -917,7 +918,7 @@
                     12,
                     0.3,
                     22,
-                    3.5
+                    2.5
                 ]
             }
         },
@@ -1832,9 +1833,9 @@
                 ["==", ["get", "structure"], "bridge"],
                 ["match", ["get", "class"], ["primary", "trunk"], true, false]
             ],
-            "layout": {"line-cap": "square", "visibility": "none"},
+            "layout": {"line-cap": "square"},
             "paint": {
-                "line-color": "hsl(43, 44%, 89%)",
+                "line-color": "hsl(43, 0%, 100%)",
                 "line-opacity": [
                     "interpolate",
                     ["linear"],
@@ -1851,7 +1852,7 @@
                     9,
                     1,
                     18,
-                    3
+                    4
                 ],
                 "line-gap-width": [
                     "interpolate",
@@ -3425,7 +3426,7 @@
         }
     ],
     "created": "2021-12-21T20:30:46.112Z",
-    "modified": "2022-01-18T18:08:56.828Z",
+    "modified": "2022-01-19T17:19:03.008Z",
     "id": "ckxgkamoa2kgy15p3cet011jw",
     "owner": "pulmap",
     "visibility": "private",
