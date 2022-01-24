@@ -92,133 +92,10 @@
                 "collapsed": true
             }
         },
-        "mapbox:decompiler": {
-            "id": "ckyt22c3t1iw014mitid24o22",
-            "componentVersion": "11.2.0",
-            "strata": [
-                {
-                    "id": "streets-v11",
-                    "order": [
-                        "land",
-                        "landcover",
-                        "national-park",
-                        "landuse",
-                        "pitch-outline",
-                        "waterway-shadow",
-                        "water-shadow",
-                        "waterway",
-                        "water",
-                        "land-structure-polygon",
-                        "land-structure-line",
-                        "aeroway-polygon",
-                        "aeroway-line",
-                        "tunnel-street-minor-low",
-                        "tunnel-street-minor-case",
-                        "tunnel-primary-secondary-tertiary-case",
-                        "tunnel-major-link-case",
-                        "tunnel-motorway-trunk-case",
-                        "tunnel-construction",
-                        "tunnel-path",
-                        "tunnel-steps",
-                        "tunnel-pedestrian",
-                        "tunnel-major-link",
-                        "tunnel-street-minor",
-                        "tunnel-primary-secondary-tertiary",
-                        "tunnel-oneway-arrow-blue",
-                        "tunnel-motorway-trunk",
-                        "tunnel-oneway-arrow-white",
-                        "ferry",
-                        "ferry-auto",
-                        "road-path-bg",
-                        "road-steps-bg",
-                        "road-pedestrian-case",
-                        "road-path",
-                        "road-steps",
-                        "road-pedestrian",
-                        "road-pedestrian-polygon-fill",
-                        "road-pedestrian-polygon-pattern",
-                        "golf-hole-line",
-                        "turning-feature-outline",
-                        "road-minor-low",
-                        "road-minor-case",
-                        "road-street-low",
-                        "road-street-case",
-                        "road-secondary-tertiary-case",
-                        "road-primary-case",
-                        "road-major-link-case",
-                        "road-motorway-trunk-case",
-                        "road-construction",
-                        "road-major-link",
-                        "road-polygon",
-                        "road-minor",
-                        "road-street",
-                        "road-secondary-tertiary",
-                        "road-primary",
-                        "road-oneway-arrow-blue",
-                        "road-motorway-trunk",
-                        "road-rail",
-                        "road-rail-tracks",
-                        "level-crossing",
-                        "road-oneway-arrow-white",
-                        "turning-feature",
-                        "bridge-path-bg",
-                        "bridge-steps-bg",
-                        "bridge-pedestrian-case",
-                        "bridge-path",
-                        "bridge-steps",
-                        "bridge-pedestrian",
-                        "bridge-street-minor-low",
-                        "bridge-street-minor-case",
-                        "bridge-primary-secondary-tertiary-case",
-                        "bridge-major-link-case",
-                        "bridge-motorway-trunk-case",
-                        "bridge-construction",
-                        "bridge-major-link",
-                        "bridge-street-minor",
-                        "bridge-primary-secondary-tertiary",
-                        "bridge-oneway-arrow-blue",
-                        "bridge-motorway-trunk",
-                        "bridge-major-link-2-case",
-                        "bridge-motorway-trunk-2-case",
-                        "bridge-major-link-2",
-                        "bridge-motorway-trunk-2",
-                        "bridge-oneway-arrow-white",
-                        "bridge-rail",
-                        "bridge-rail-tracks",
-                        "aerialway",
-                        "road-label tertiary",
-                        "road-label secondary",
-                        "road-label primary",
-                        "road-label trunk",
-                        "road-label motorway",
-                        "road-label small streets",
-                        "road-intersection",
-                        "road-number-shield",
-                        "road-exit-shield",
-                        "path-pedestrian-label",
-                        "golf-hole-label",
-                        "ferry-aerialway-label",
-                        "waterway-label",
-                        "natural-line-label",
-                        "natural-point-label",
-                        "water-line-label",
-                        "water-point-label",
-                        "poi-label",
-                        "transit-label",
-                        "airport-label",
-                        "settlement-subdivision-label",
-                        "settlement-minor-label",
-                        "settlement-major-label",
-                        "state-label",
-                        "country-label"
-                    ]
-                }
-            ]
-        },
         "mapbox:uiParadigm": "layers"
     },
-    "center": [-73.96614899408966, 40.770850167484724],
-    "zoom": 13.20990783233029,
+    "center": [-73.98756447126566, 40.725681161641546],
+    "zoom": 12.964486325888076,
     "bearing": 0,
     "pitch": 0,
     "sources": {
@@ -3665,589 +3542,6 @@
             }
         },
         {
-            "id": "road-label tertiary",
-            "type": "symbol",
-            "source": "composite",
-            "source-layer": "road",
-            "minzoom": 10,
-            "filter": [
-                "step",
-                ["zoom"],
-                ["match", ["get", "class"], ["tertiary"], true, false],
-                12,
-                ["match", ["get", "class"], ["tertiary"], true, false],
-                15,
-                [
-                    "match",
-                    ["get", "class"],
-                    ["path", "pedestrian", "golf", "ferry", "aerialway"],
-                    false,
-                    true
-                ]
-            ],
-            "layout": {
-                "text-size": [
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    10,
-                    [
-                        "match",
-                        ["get", "class"],
-                        [
-                            "motorway",
-                            "trunk",
-                            "primary",
-                            "secondary",
-                            "tertiary"
-                        ],
-                        10,
-                        [
-                            "motorway_link",
-                            "trunk_link",
-                            "primary_link",
-                            "secondary_link",
-                            "tertiary_link",
-                            "street",
-                            "street_limited"
-                        ],
-                        9,
-                        6.5
-                    ],
-                    18,
-                    [
-                        "match",
-                        ["get", "class"],
-                        [
-                            "motorway",
-                            "trunk",
-                            "primary",
-                            "secondary",
-                            "tertiary"
-                        ],
-                        16,
-                        [
-                            "motorway_link",
-                            "trunk_link",
-                            "primary_link",
-                            "secondary_link",
-                            "tertiary_link",
-                            "street",
-                            "street_limited"
-                        ],
-                        14,
-                        13
-                    ]
-                ],
-                "text-max-angle": 30,
-                "text-font": ["DIN Pro Regular", "Arial Unicode MS Regular"],
-                "symbol-placement": "line",
-                "text-padding": 1,
-                "text-rotation-alignment": "map",
-                "text-pitch-alignment": "viewport",
-                "text-field": ["coalesce", ["get", "name_en"], ["get", "name"]],
-                "text-letter-spacing": 0.01
-            },
-            "paint": {
-                "text-color": "hsl(0,0%, 0%)",
-                "text-halo-color": [
-                    "match",
-                    ["get", "class"],
-                    ["motorway", "trunk"],
-                    "hsla(35, 19%, 100%, 0.75)",
-                    "hsl(35, 19%, 100%)"
-                ],
-                "text-halo-width": 1,
-                "text-halo-blur": 1
-            }
-        },
-        {
-            "id": "road-label secondary",
-            "type": "symbol",
-            "source": "composite",
-            "source-layer": "road",
-            "minzoom": 10,
-            "filter": [
-                "step",
-                ["zoom"],
-                ["match", ["get", "class"], ["secondary"], true, false],
-                12,
-                ["match", ["get", "class"], ["secondary"], true, false],
-                15,
-                [
-                    "match",
-                    ["get", "class"],
-                    ["path", "pedestrian", "golf", "ferry", "aerialway"],
-                    false,
-                    true
-                ]
-            ],
-            "layout": {
-                "text-size": [
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    10,
-                    [
-                        "match",
-                        ["get", "class"],
-                        [
-                            "motorway",
-                            "trunk",
-                            "primary",
-                            "secondary",
-                            "tertiary"
-                        ],
-                        10,
-                        [
-                            "motorway_link",
-                            "trunk_link",
-                            "primary_link",
-                            "secondary_link",
-                            "tertiary_link",
-                            "street",
-                            "street_limited"
-                        ],
-                        9,
-                        6.5
-                    ],
-                    18,
-                    [
-                        "match",
-                        ["get", "class"],
-                        [
-                            "motorway",
-                            "trunk",
-                            "primary",
-                            "secondary",
-                            "tertiary"
-                        ],
-                        16,
-                        [
-                            "motorway_link",
-                            "trunk_link",
-                            "primary_link",
-                            "secondary_link",
-                            "tertiary_link",
-                            "street",
-                            "street_limited"
-                        ],
-                        14,
-                        13
-                    ]
-                ],
-                "text-max-angle": 30,
-                "text-font": ["DIN Pro Regular", "Arial Unicode MS Regular"],
-                "symbol-placement": "line",
-                "text-padding": 1,
-                "text-rotation-alignment": "map",
-                "text-pitch-alignment": "viewport",
-                "text-field": ["coalesce", ["get", "name_en"], ["get", "name"]],
-                "text-letter-spacing": 0.01
-            },
-            "paint": {
-                "text-color": "hsl(0,0%, 0%)",
-                "text-halo-color": [
-                    "match",
-                    ["get", "class"],
-                    ["motorway", "trunk"],
-                    "hsla(35, 19%, 100%, 0.75)",
-                    "hsl(35, 19%, 100%)"
-                ],
-                "text-halo-width": 1,
-                "text-halo-blur": 1
-            }
-        },
-        {
-            "id": "road-label primary",
-            "type": "symbol",
-            "source": "composite",
-            "source-layer": "road",
-            "minzoom": 10,
-            "filter": [
-                "step",
-                ["zoom"],
-                ["match", ["get", "class"], ["primary"], true, false],
-                12,
-                ["match", ["get", "class"], ["primary"], true, false],
-                15,
-                [
-                    "match",
-                    ["get", "class"],
-                    ["path", "pedestrian", "golf", "ferry", "aerialway"],
-                    false,
-                    true
-                ]
-            ],
-            "layout": {
-                "text-size": [
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    10,
-                    [
-                        "match",
-                        ["get", "class"],
-                        [
-                            "motorway",
-                            "trunk",
-                            "primary",
-                            "secondary",
-                            "tertiary"
-                        ],
-                        10,
-                        [
-                            "motorway_link",
-                            "trunk_link",
-                            "primary_link",
-                            "secondary_link",
-                            "tertiary_link",
-                            "street",
-                            "street_limited"
-                        ],
-                        9,
-                        6.5
-                    ],
-                    18,
-                    [
-                        "match",
-                        ["get", "class"],
-                        [
-                            "motorway",
-                            "trunk",
-                            "primary",
-                            "secondary",
-                            "tertiary"
-                        ],
-                        16,
-                        [
-                            "motorway_link",
-                            "trunk_link",
-                            "primary_link",
-                            "secondary_link",
-                            "tertiary_link",
-                            "street",
-                            "street_limited"
-                        ],
-                        14,
-                        13
-                    ]
-                ],
-                "text-max-angle": 30,
-                "text-font": ["DIN Pro Regular", "Arial Unicode MS Regular"],
-                "symbol-placement": "line",
-                "text-padding": 1,
-                "text-rotation-alignment": "map",
-                "text-pitch-alignment": "viewport",
-                "text-field": ["coalesce", ["get", "name_en"], ["get", "name"]],
-                "text-letter-spacing": 0.01
-            },
-            "paint": {
-                "text-color": "hsl(0,0%, 0%)",
-                "text-halo-color": [
-                    "match",
-                    ["get", "class"],
-                    ["motorway", "trunk"],
-                    "hsla(35, 19%, 100%, 0.75)",
-                    "hsl(35, 19%, 100%)"
-                ],
-                "text-halo-width": 1,
-                "text-halo-blur": 1
-            }
-        },
-        {
-            "id": "road-label trunk",
-            "type": "symbol",
-            "source": "composite",
-            "source-layer": "road",
-            "minzoom": 10,
-            "filter": [
-                "step",
-                ["zoom"],
-                ["match", ["get", "class"], ["trunk"], true, false],
-                12,
-                ["match", ["get", "class"], ["trunk"], true, false],
-                15,
-                [
-                    "match",
-                    ["get", "class"],
-                    ["path", "pedestrian", "golf", "ferry", "aerialway"],
-                    false,
-                    true
-                ]
-            ],
-            "layout": {
-                "text-size": [
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    10,
-                    [
-                        "match",
-                        ["get", "class"],
-                        [
-                            "motorway",
-                            "trunk",
-                            "primary",
-                            "secondary",
-                            "tertiary"
-                        ],
-                        10,
-                        [
-                            "motorway_link",
-                            "trunk_link",
-                            "primary_link",
-                            "secondary_link",
-                            "tertiary_link",
-                            "street",
-                            "street_limited"
-                        ],
-                        9,
-                        6.5
-                    ],
-                    18,
-                    [
-                        "match",
-                        ["get", "class"],
-                        [
-                            "motorway",
-                            "trunk",
-                            "primary",
-                            "secondary",
-                            "tertiary"
-                        ],
-                        16,
-                        [
-                            "motorway_link",
-                            "trunk_link",
-                            "primary_link",
-                            "secondary_link",
-                            "tertiary_link",
-                            "street",
-                            "street_limited"
-                        ],
-                        14,
-                        13
-                    ]
-                ],
-                "text-max-angle": 30,
-                "text-font": ["DIN Pro Regular", "Arial Unicode MS Regular"],
-                "symbol-placement": "line",
-                "text-padding": 1,
-                "text-rotation-alignment": "map",
-                "text-pitch-alignment": "viewport",
-                "text-field": ["coalesce", ["get", "name_en"], ["get", "name"]],
-                "text-letter-spacing": 0.01
-            },
-            "paint": {
-                "text-color": "hsl(0,0%, 0%)",
-                "text-halo-color": [
-                    "match",
-                    ["get", "class"],
-                    ["motorway", "trunk"],
-                    "hsla(35, 19%, 100%, 0.75)",
-                    "hsl(35, 19%, 100%)"
-                ],
-                "text-halo-width": 1,
-                "text-halo-blur": 1
-            }
-        },
-        {
-            "id": "road-label motorway",
-            "type": "symbol",
-            "source": "composite",
-            "source-layer": "road",
-            "minzoom": 10,
-            "filter": [
-                "step",
-                ["zoom"],
-                ["match", ["get", "class"], ["motorway"], true, false],
-                12,
-                ["match", ["get", "class"], ["motorway"], true, false],
-                15,
-                [
-                    "match",
-                    ["get", "class"],
-                    ["path", "pedestrian", "golf", "ferry", "aerialway"],
-                    false,
-                    true
-                ]
-            ],
-            "layout": {
-                "text-size": [
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    10,
-                    [
-                        "match",
-                        ["get", "class"],
-                        [
-                            "motorway",
-                            "trunk",
-                            "primary",
-                            "secondary",
-                            "tertiary"
-                        ],
-                        10,
-                        [
-                            "motorway_link",
-                            "trunk_link",
-                            "primary_link",
-                            "secondary_link",
-                            "tertiary_link",
-                            "street",
-                            "street_limited"
-                        ],
-                        9,
-                        6.5
-                    ],
-                    18,
-                    [
-                        "match",
-                        ["get", "class"],
-                        [
-                            "motorway",
-                            "trunk",
-                            "primary",
-                            "secondary",
-                            "tertiary"
-                        ],
-                        16,
-                        [
-                            "motorway_link",
-                            "trunk_link",
-                            "primary_link",
-                            "secondary_link",
-                            "tertiary_link",
-                            "street",
-                            "street_limited"
-                        ],
-                        14,
-                        13
-                    ]
-                ],
-                "text-max-angle": 30,
-                "text-font": ["DIN Pro Regular", "Arial Unicode MS Regular"],
-                "symbol-placement": "line",
-                "text-padding": 1,
-                "text-rotation-alignment": "map",
-                "text-pitch-alignment": "viewport",
-                "text-field": ["coalesce", ["get", "name_en"], ["get", "name"]],
-                "text-letter-spacing": 0.01
-            },
-            "paint": {
-                "text-color": "hsl(0,0%, 0%)",
-                "text-halo-color": [
-                    "match",
-                    ["get", "class"],
-                    ["motorway", "trunk"],
-                    "hsla(35, 19%, 100%, 0.75)",
-                    "hsl(35, 19%, 100%)"
-                ],
-                "text-halo-width": 1,
-                "text-halo-blur": 1
-            }
-        },
-        {
-            "id": "road-label small streets",
-            "type": "symbol",
-            "source": "composite",
-            "source-layer": "road",
-            "minzoom": 10,
-            "filter": [
-                "step",
-                ["zoom"],
-                ["match", ["get", "class"], ["secondary"], true, false],
-                12,
-                [
-                    "match",
-                    ["get", "class"],
-                    ["street", "street_limited"],
-                    true,
-                    false
-                ],
-                15,
-                ["match", ["get", "class"], ["pedestrian"], false, true]
-            ],
-            "layout": {
-                "text-size": [
-                    "interpolate",
-                    ["linear"],
-                    ["zoom"],
-                    10,
-                    [
-                        "match",
-                        ["get", "class"],
-                        [
-                            "motorway",
-                            "trunk",
-                            "primary",
-                            "secondary",
-                            "tertiary"
-                        ],
-                        10,
-                        [
-                            "motorway_link",
-                            "trunk_link",
-                            "primary_link",
-                            "secondary_link",
-                            "tertiary_link",
-                            "street",
-                            "street_limited"
-                        ],
-                        9,
-                        6.5
-                    ],
-                    18,
-                    [
-                        "match",
-                        ["get", "class"],
-                        [
-                            "motorway",
-                            "trunk",
-                            "primary",
-                            "secondary",
-                            "tertiary"
-                        ],
-                        16,
-                        [
-                            "motorway_link",
-                            "trunk_link",
-                            "primary_link",
-                            "secondary_link",
-                            "tertiary_link",
-                            "street",
-                            "street_limited"
-                        ],
-                        14,
-                        13
-                    ]
-                ],
-                "text-max-angle": 30,
-                "text-font": ["DIN Pro Regular", "Arial Unicode MS Regular"],
-                "symbol-placement": "line",
-                "text-padding": 1,
-                "visibility": "none",
-                "text-rotation-alignment": "map",
-                "text-pitch-alignment": "viewport",
-                "text-field": ["coalesce", ["get", "name_en"], ["get", "name"]],
-                "text-letter-spacing": 0.01
-            },
-            "paint": {
-                "text-color": "hsl(0,0%, 0%)",
-                "text-halo-color": [
-                    "match",
-                    ["get", "class"],
-                    ["motorway", "trunk"],
-                    "hsla(35, 19%, 100%, 0.75)",
-                    "hsl(35, 19%, 100%)"
-                ],
-                "text-halo-width": 1,
-                "text-halo-blur": 1
-            }
-        },
-        {
             "id": "road-intersection",
             "type": "symbol",
             "source": "composite",
@@ -5656,10 +4950,634 @@
                 ],
                 "text-halo-width": 1.25
             }
+        },
+        {
+            "id": "road-label tertiary",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "road",
+            "minzoom": 10,
+            "filter": [
+                "step",
+                ["zoom"],
+                ["match", ["get", "class"], ["tertiary"], true, false],
+                12,
+                ["match", ["get", "class"], ["tertiary"], true, false],
+                15,
+                [
+                    "match",
+                    ["get", "class"],
+                    ["path", "pedestrian", "golf", "ferry", "aerialway"],
+                    false,
+                    true
+                ]
+            ],
+            "layout": {
+                "text-size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    10,
+                    [
+                        "match",
+                        ["get", "class"],
+                        [
+                            "motorway",
+                            "trunk",
+                            "primary",
+                            "secondary",
+                            "tertiary"
+                        ],
+                        10,
+                        [
+                            "motorway_link",
+                            "trunk_link",
+                            "primary_link",
+                            "secondary_link",
+                            "tertiary_link",
+                            "street",
+                            "street_limited"
+                        ],
+                        9,
+                        6.5
+                    ],
+                    18,
+                    [
+                        "match",
+                        ["get", "class"],
+                        [
+                            "motorway",
+                            "trunk",
+                            "primary",
+                            "secondary",
+                            "tertiary"
+                        ],
+                        16,
+                        [
+                            "motorway_link",
+                            "trunk_link",
+                            "primary_link",
+                            "secondary_link",
+                            "tertiary_link",
+                            "street",
+                            "street_limited"
+                        ],
+                        14,
+                        13
+                    ]
+                ],
+                "text-max-angle": 30,
+                "text-font": ["DIN Pro Regular", "Arial Unicode MS Regular"],
+                "symbol-placement": "line",
+                "text-padding": 1,
+                "visibility": "none",
+                "text-rotation-alignment": "map",
+                "text-pitch-alignment": "viewport",
+                "text-field": ["coalesce", ["get", "name_en"], ["get", "name"]],
+                "text-letter-spacing": 0.01
+            },
+            "paint": {
+                "text-color": "hsl(0,0%, 0%)",
+                "text-halo-color": [
+                    "match",
+                    ["get", "class"],
+                    ["motorway", "trunk"],
+                    "hsla(35, 19%, 100%, 0.75)",
+                    "hsl(35, 19%, 100%)"
+                ],
+                "text-halo-width": 1,
+                "text-halo-blur": 1
+            }
+        },
+        {
+            "id": "road-label secondary",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "road",
+            "minzoom": 10,
+            "filter": [
+                "step",
+                ["zoom"],
+                ["match", ["get", "class"], ["secondary"], true, false],
+                12,
+                ["match", ["get", "class"], ["secondary"], true, false],
+                15,
+                [
+                    "match",
+                    ["get", "class"],
+                    ["path", "pedestrian", "golf", "ferry", "aerialway"],
+                    false,
+                    true
+                ]
+            ],
+            "layout": {
+                "text-size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    10,
+                    [
+                        "match",
+                        ["get", "class"],
+                        [
+                            "motorway",
+                            "trunk",
+                            "primary",
+                            "secondary",
+                            "tertiary"
+                        ],
+                        10,
+                        [
+                            "motorway_link",
+                            "trunk_link",
+                            "primary_link",
+                            "secondary_link",
+                            "tertiary_link",
+                            "street",
+                            "street_limited"
+                        ],
+                        9,
+                        6.5
+                    ],
+                    18,
+                    [
+                        "match",
+                        ["get", "class"],
+                        [
+                            "motorway",
+                            "trunk",
+                            "primary",
+                            "secondary",
+                            "tertiary"
+                        ],
+                        16,
+                        [
+                            "motorway_link",
+                            "trunk_link",
+                            "primary_link",
+                            "secondary_link",
+                            "tertiary_link",
+                            "street",
+                            "street_limited"
+                        ],
+                        14,
+                        13
+                    ]
+                ],
+                "text-max-angle": 30,
+                "text-font": ["DIN Pro Regular", "Arial Unicode MS Regular"],
+                "symbol-placement": "line",
+                "text-padding": 1,
+                "visibility": "none",
+                "text-rotation-alignment": "map",
+                "text-pitch-alignment": "viewport",
+                "text-field": ["coalesce", ["get", "name_en"], ["get", "name"]],
+                "text-letter-spacing": 0.01
+            },
+            "paint": {
+                "text-color": "hsl(0,0%, 0%)",
+                "text-halo-color": [
+                    "match",
+                    ["get", "class"],
+                    ["motorway", "trunk"],
+                    "hsla(35, 19%, 100%, 0.75)",
+                    "hsl(35, 19%, 100%)"
+                ],
+                "text-halo-width": 1,
+                "text-halo-blur": 1
+            }
+        },
+        {
+            "id": "road-label primary",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "road",
+            "minzoom": 10,
+            "filter": [
+                "step",
+                ["zoom"],
+                ["match", ["get", "class"], ["primary"], true, false],
+                12,
+                ["match", ["get", "class"], ["primary"], true, false],
+                15,
+                [
+                    "match",
+                    ["get", "class"],
+                    ["path", "pedestrian", "golf", "ferry", "aerialway"],
+                    false,
+                    true
+                ]
+            ],
+            "layout": {
+                "text-size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    10,
+                    [
+                        "match",
+                        ["get", "class"],
+                        [
+                            "motorway",
+                            "trunk",
+                            "primary",
+                            "secondary",
+                            "tertiary"
+                        ],
+                        10,
+                        [
+                            "motorway_link",
+                            "trunk_link",
+                            "primary_link",
+                            "secondary_link",
+                            "tertiary_link",
+                            "street",
+                            "street_limited"
+                        ],
+                        9,
+                        6.5
+                    ],
+                    18,
+                    [
+                        "match",
+                        ["get", "class"],
+                        [
+                            "motorway",
+                            "trunk",
+                            "primary",
+                            "secondary",
+                            "tertiary"
+                        ],
+                        16,
+                        [
+                            "motorway_link",
+                            "trunk_link",
+                            "primary_link",
+                            "secondary_link",
+                            "tertiary_link",
+                            "street",
+                            "street_limited"
+                        ],
+                        14,
+                        13
+                    ]
+                ],
+                "text-max-angle": 30,
+                "text-font": ["DIN Pro Regular", "Arial Unicode MS Regular"],
+                "symbol-placement": "line",
+                "text-padding": 1,
+                "visibility": "none",
+                "text-rotation-alignment": "map",
+                "text-pitch-alignment": "viewport",
+                "text-field": ["coalesce", ["get", "name_en"], ["get", "name"]],
+                "text-letter-spacing": 0.01
+            },
+            "paint": {
+                "text-color": "hsl(0,0%, 0%)",
+                "text-halo-color": [
+                    "match",
+                    ["get", "class"],
+                    ["motorway", "trunk"],
+                    "hsla(35, 19%, 100%, 0.75)",
+                    "hsl(35, 19%, 100%)"
+                ],
+                "text-halo-width": 1,
+                "text-halo-blur": 1
+            }
+        },
+        {
+            "id": "road-label trunk",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "road",
+            "minzoom": 10,
+            "filter": [
+                "step",
+                ["zoom"],
+                ["match", ["get", "class"], ["trunk"], true, false],
+                12,
+                ["match", ["get", "class"], ["trunk"], true, false],
+                15,
+                [
+                    "match",
+                    ["get", "class"],
+                    ["path", "pedestrian", "golf", "ferry", "aerialway"],
+                    false,
+                    true
+                ]
+            ],
+            "layout": {
+                "text-size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    10,
+                    [
+                        "match",
+                        ["get", "class"],
+                        [
+                            "motorway",
+                            "trunk",
+                            "primary",
+                            "secondary",
+                            "tertiary"
+                        ],
+                        10,
+                        [
+                            "motorway_link",
+                            "trunk_link",
+                            "primary_link",
+                            "secondary_link",
+                            "tertiary_link",
+                            "street",
+                            "street_limited"
+                        ],
+                        9,
+                        6.5
+                    ],
+                    18,
+                    [
+                        "match",
+                        ["get", "class"],
+                        [
+                            "motorway",
+                            "trunk",
+                            "primary",
+                            "secondary",
+                            "tertiary"
+                        ],
+                        16,
+                        [
+                            "motorway_link",
+                            "trunk_link",
+                            "primary_link",
+                            "secondary_link",
+                            "tertiary_link",
+                            "street",
+                            "street_limited"
+                        ],
+                        14,
+                        13
+                    ]
+                ],
+                "text-max-angle": 30,
+                "text-font": ["DIN Pro Regular", "Arial Unicode MS Regular"],
+                "symbol-placement": "line",
+                "text-padding": 1,
+                "visibility": "none",
+                "text-rotation-alignment": "map",
+                "text-pitch-alignment": "viewport",
+                "text-field": ["coalesce", ["get", "name_en"], ["get", "name"]],
+                "text-letter-spacing": 0.01
+            },
+            "paint": {
+                "text-color": "hsl(0,0%, 0%)",
+                "text-halo-color": [
+                    "match",
+                    ["get", "class"],
+                    ["motorway", "trunk"],
+                    "hsla(35, 19%, 100%, 0.75)",
+                    "hsl(35, 19%, 100%)"
+                ],
+                "text-halo-width": 1,
+                "text-halo-blur": 1
+            }
+        },
+        {
+            "id": "road-label motorway",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "road",
+            "minzoom": 10,
+            "filter": [
+                "step",
+                ["zoom"],
+                ["match", ["get", "class"], ["motorway"], true, false],
+                12,
+                ["match", ["get", "class"], ["motorway"], true, false],
+                15,
+                [
+                    "match",
+                    ["get", "class"],
+                    ["path", "pedestrian", "golf", "ferry", "aerialway"],
+                    false,
+                    true
+                ]
+            ],
+            "layout": {
+                "text-size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    10,
+                    [
+                        "match",
+                        ["get", "class"],
+                        [
+                            "motorway",
+                            "trunk",
+                            "primary",
+                            "secondary",
+                            "tertiary"
+                        ],
+                        10,
+                        [
+                            "motorway_link",
+                            "trunk_link",
+                            "primary_link",
+                            "secondary_link",
+                            "tertiary_link",
+                            "street",
+                            "street_limited"
+                        ],
+                        9,
+                        6.5
+                    ],
+                    18,
+                    [
+                        "match",
+                        ["get", "class"],
+                        [
+                            "motorway",
+                            "trunk",
+                            "primary",
+                            "secondary",
+                            "tertiary"
+                        ],
+                        16,
+                        [
+                            "motorway_link",
+                            "trunk_link",
+                            "primary_link",
+                            "secondary_link",
+                            "tertiary_link",
+                            "street",
+                            "street_limited"
+                        ],
+                        14,
+                        13
+                    ]
+                ],
+                "text-max-angle": 30,
+                "text-font": ["DIN Pro Regular", "Arial Unicode MS Regular"],
+                "symbol-placement": "line",
+                "text-padding": 1,
+                "visibility": "none",
+                "text-rotation-alignment": "map",
+                "text-pitch-alignment": "viewport",
+                "text-field": ["coalesce", ["get", "name_en"], ["get", "name"]],
+                "text-letter-spacing": 0.01
+            },
+            "paint": {
+                "text-color": "hsl(0,0%, 0%)",
+                "text-halo-color": [
+                    "match",
+                    ["get", "class"],
+                    ["motorway", "trunk"],
+                    "hsla(35, 19%, 100%, 0.75)",
+                    "hsl(35, 19%, 100%)"
+                ],
+                "text-halo-width": 1,
+                "text-halo-blur": 1
+            }
+        },
+        {
+            "id": "road-label small streets",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "road",
+            "minzoom": 10,
+            "filter": [
+                "step",
+                ["zoom"],
+                ["match", ["get", "class"], ["secondary"], true, false],
+                12,
+                [
+                    "match",
+                    ["get", "class"],
+                    ["street", "street_limited"],
+                    true,
+                    false
+                ],
+                15,
+                ["match", ["get", "class"], ["pedestrian"], false, true]
+            ],
+            "layout": {
+                "text-size": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    10,
+                    [
+                        "match",
+                        ["get", "class"],
+                        [
+                            "motorway",
+                            "trunk",
+                            "primary",
+                            "secondary",
+                            "tertiary"
+                        ],
+                        10,
+                        [
+                            "motorway_link",
+                            "trunk_link",
+                            "primary_link",
+                            "secondary_link",
+                            "tertiary_link",
+                            "street",
+                            "street_limited"
+                        ],
+                        9,
+                        6.5
+                    ],
+                    18,
+                    [
+                        "match",
+                        ["get", "class"],
+                        [
+                            "motorway",
+                            "trunk",
+                            "primary",
+                            "secondary",
+                            "tertiary"
+                        ],
+                        16,
+                        [
+                            "motorway_link",
+                            "trunk_link",
+                            "primary_link",
+                            "secondary_link",
+                            "tertiary_link",
+                            "street",
+                            "street_limited"
+                        ],
+                        14,
+                        13
+                    ]
+                ],
+                "text-max-angle": 30,
+                "text-font": ["DIN Pro Regular", "Arial Unicode MS Regular"],
+                "symbol-placement": "line",
+                "text-padding": 1,
+                "visibility": "none",
+                "text-rotation-alignment": "map",
+                "text-pitch-alignment": "viewport",
+                "text-field": ["coalesce", ["get", "name_en"], ["get", "name"]],
+                "text-letter-spacing": 0.01
+            },
+            "paint": {
+                "text-color": "hsl(0,0%, 0%)",
+                "text-halo-color": [
+                    "match",
+                    ["get", "class"],
+                    ["motorway", "trunk"],
+                    "hsla(35, 19%, 100%, 0.75)",
+                    "hsl(35, 19%, 100%)"
+                ],
+                "text-halo-width": 1,
+                "text-halo-blur": 1
+            }
+        },
+        {
+            "id": "road - tertiary",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "road",
+            "filter": ["match", ["get", "class"], ["tertiary"], true, false],
+            "layout": {
+                "symbol-placement": "line",
+                "text-field": ["coalesce", ["get", "name_en"], ["get", "name"]]
+            },
+            "paint": {}
+        },
+        {
+            "id": "road - motorway",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "road",
+            "filter": ["match", ["get", "class"], ["motorway"], true, false],
+            "layout": {
+                "text-field": ["coalesce", ["get", "name_en"], ["get", "name"]],
+                "symbol-placement": "line"
+            },
+            "paint": {}
+        },
+        {
+            "id": "road - motorway secondary",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "road",
+            "filter": ["match", ["get", "class"], ["secondary"], true, false],
+            "layout": {
+                "text-field": ["coalesce", ["get", "name_en"], ["get", "name"]],
+                "symbol-placement": "line"
+            },
+            "paint": {}
         }
     ],
     "created": "2022-01-24T19:01:08.709Z",
-    "modified": "2022-01-24T19:15:24.989Z",
+    "modified": "2022-01-24T19:28:15.500Z",
     "id": "ckyt22c3t1iw014mitid24o22",
     "owner": "pulmap",
     "visibility": "private",
