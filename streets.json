@@ -94,13 +94,13 @@
         },
         "mapbox:uiParadigm": "layers"
     },
-    "center": [-73.8936345098482, 40.69391413196587],
-    "zoom": 10.695494604623848,
+    "center": [27.072526868062994, 57.43844117981968],
+    "zoom": 12.392302632571663,
     "bearing": 0,
     "pitch": 0,
     "sources": {
         "composite": {
-            "url": "mapbox://mapbox.mapbox-streets-v8,mapbox.mapbox-terrain-v2",
+            "url": "mapbox://mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v8",
             "type": "vector"
         }
     },
@@ -4305,13 +4305,18 @@
             "minzoom": 6,
             "filter": [
                 "all",
-                ["<=", ["get", "filterrank"], 3],
+                ["<=", ["get", "filterrank"], 1],
                 [
                     "match",
                     ["get", "category_en"],
-                    ["Bridge", "Restaurant", "Hotel", "Park"],
-                    false,
-                    true
+                    [
+                        "Tourist Attraction",
+                        "Museum",
+                        "Stadium",
+                        "Sports Complex"
+                    ],
+                    true,
+                    false
                 ]
             ],
             "layout": {
@@ -5911,10 +5916,28 @@
                 "symbol-placement": "line"
             },
             "paint": {}
+        },
+        {
+            "id": "water label",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "natural_label",
+            "filter": [
+                "match",
+                ["get", "class"],
+                ["river", "water"],
+                true,
+                false
+            ],
+            "layout": {
+                "text-field": ["get", "name"],
+                "symbol-placement": "line"
+            },
+            "paint": {}
         }
     ],
     "created": "2022-01-24T19:01:08.709Z",
-    "modified": "2022-01-24T21:34:12.970Z",
+    "modified": "2022-01-24T23:31:07.733Z",
     "id": "ckyt22c3t1iw014mitid24o22",
     "owner": "pulmap",
     "visibility": "private",
