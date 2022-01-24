@@ -94,8 +94,8 @@
         },
         "mapbox:uiParadigm": "layers"
     },
-    "center": [-84.37474445957609, 33.75431810362923],
-    "zoom": 14.970800341957144,
+    "center": [-73.8936345098482, 40.69391413196587],
+    "zoom": 10.695494604623848,
     "bearing": 0,
     "pitch": 0,
     "sources": {
@@ -4306,7 +4306,13 @@
             "filter": [
                 "all",
                 ["<=", ["get", "filterrank"], 3],
-                ["match", ["get", "category_en"], ["Bridge"], false, true]
+                [
+                    "match",
+                    ["get", "category_en"],
+                    ["Bridge", "Restaurant", "Hotel", "Park"],
+                    false,
+                    true
+                ]
             ],
             "layout": {
                 "text-size": [
@@ -5908,7 +5914,7 @@
         }
     ],
     "created": "2022-01-24T19:01:08.709Z",
-    "modified": "2022-01-24T20:43:33.100Z",
+    "modified": "2022-01-24T21:34:12.970Z",
     "id": "ckyt22c3t1iw014mitid24o22",
     "owner": "pulmap",
     "visibility": "private",
