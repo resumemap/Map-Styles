@@ -1,314 +1,257 @@
-[
-  {
-    "minzoom": 6,
-    "layout": {
-      "text-size": 9,
-      "icon-image": [
-        "case",
-        [
-          "has",
-          "shield_beta"
-        ],
-        [
-          "coalesce",
-          [
-            "image",
-            [
-              "concat",
-              [
-                "get",
-                "shield_beta"
-              ],
-              "-",
-              [
-                "to-string",
-                [
-                  "get",
-                  "reflen"
-                ]
-              ]
-            ]
-          ],
-          [
-            "image",
-            [
-              "concat",
-              [
-                "get",
-                "shield"
-              ],
-              "-",
-              [
-                "to-string",
-                [
-                  "get",
-                  "reflen"
-                ]
-              ]
-            ]
-          ],
-          [
-            "image",
-            [
-              "concat",
-              "default-",
-              [
-                "to-string",
-                [
-                  "get",
-                  "reflen"
-                ]
-              ]
-            ]
-          ]
-        ],
-        [
-          "concat",
-          [
-            "get",
-            "shield"
-          ],
-          "-",
-          [
-            "to-string",
-            [
-              "get",
-              "reflen"
-            ]
-          ]
-        ]
-      ],
-      "icon-rotation-alignment": "viewport",
-      "text-max-angle": 38,
-      "symbol-spacing": [
-        "interpolate",
-        [
-          "linear"
-        ],
-        [
-          "zoom"
-        ],
-        11,
-        400,
-        14,
-        600
-      ],
-      "text-font": [
-        "DIN Pro Bold",
-        "Arial Unicode MS Bold"
-      ],
-      "symbol-placement": [
-        "step",
-        [
-          "zoom"
-        ],
-        "point",
-        11,
-        "line"
-      ],
-      "text-rotation-alignment": "viewport",
-      "text-field": [
-        "get",
-        "ref"
-      ],
-      "text-letter-spacing": 0.05
+{
+    "version": 8,
+    "name": "ROAD SHIELDS",
+    "metadata": {
+        "mapbox:type": "default",
+        "mapbox:origin": "streets-v12",
+        "mapbox:sdk-support": {
+            "js": "3.9.0",
+            "android": "11.9.0",
+            "ios": "11.9.0"
+        },
+        "mapbox:autocomposite": true,
+        "mapbox:groups": {
+            "Road network, tunnels": {
+                "name": "Road network, tunnels",
+                "collapsed": false
+            },
+            "Road network, surface": {
+                "name": "Road network, surface",
+                "collapsed": true
+            },
+            "Road network, bridges": {
+                "name": "Road network, bridges",
+                "collapsed": true
+            },
+            "Road network, road-labels": {
+                "name": "Road network, road-labels",
+                "collapsed": true
+            }
+        },
+        "mapbox:thumb": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAPKADAAQAAAABAAAAPAAAAACL3+lcAAABz0lEQVRoBe2av0/CQBTHvy0qCsHExUQ3o4ODm7P/rLo5OhgNRp2IiZooKTvhhwJGwq9So6BgBNOcXNpLm9w93i2E6/Xufd7nXUtarK9Rwxw1e45Yf1AZmLpxNsyGiWWAS5qYUAGHDQspIdbBhokJFXDYsJASYh1smJhQAYcNCykh1sGGiQkVcNiwkBJiHVPD+UIVztNV7Hitdg9Hxyco5G9iX+u/BRYmnZadRNvbnHyN7TOdWsH27gHSa8uxrSGb2JrrB/H1UhPXhzkUnWdZkow+5jM8HAJ3+Rb291aRSFhGg80K3gc8axCl/ulVmhKUjGV6lZYNonCs0XhFv++BS5qCTRlDqD381mxiXBomt1DAtZc6SuWKyby8h422FyR4aUk7WQePp/dB5jFmjPQ+nNzZgv1J608+fB82pjYVA5XuYcU5tT6NgbXWE0FwbDiCJGo9BRvWWk8EwbHhCJKo9RRKhs8vLuG6rtZgg8EA5UoVnU7XF6fSb+larY5MJoPU6LWJrm0M7HneKMYULOvvGbsSsK6QQeJSKukgE+s6xjjgXu8dfe9DOZ/GAZ9lH5C7dZSBjdvDxYqLpUUbG+tq75eNA1ZW+3uicSXNwCEz8A1pCoNtZDirBwAAAABJRU5ErkJggg==",
+        "mapbox:uiParadigm": "layers"
     },
-    "filter": [
-      "all",
-      [
-        "case",
-        [
-          "has",
-          "reflen"
+    "center": [-93.12941967749758, 44.860199681678125],
+    "zoom": 13.591064600863055,
+    "bearing": 0,
+    "pitch": 0,
+    "fog": {
+        "range": [2, 20],
+        "color": "hsl(0, 0%, 100%)",
+        "high-color": "hsl(210, 100%, 80%)",
+        "space-color": [
+            "interpolate",
+            ["exponential", 1.2],
+            ["zoom"],
+            5,
+            "hsl(210, 40%, 30%)",
+            7,
+            "hsl(210, 100%, 80%)"
         ],
-        [
-          "<=",
-          [
-            "get",
-            "reflen"
-          ],
-          6
+        "horizon-blend": [
+            "interpolate",
+            ["exponential", 1.2],
+            ["zoom"],
+            5,
+            0.02,
+            7,
+            0.08
         ],
-        [
-          "has",
-          "shield_beta"
+        "star-intensity": [
+            "interpolate",
+            ["exponential", 1.2],
+            ["zoom"],
+            5,
+            0.1,
+            7,
+            0
         ]
-      ],
-      [
-        "match",
-        [
-          "get",
-          "class"
-        ],
-        [
-          "pedestrian",
-          "service"
-        ],
-        false,
-        true
-      ],
-      [
-        "step",
-        [
-          "zoom"
-        ],
-        [
-          "==",
-          [
-            "geometry-type"
-          ],
-          "Point"
-        ],
-        11,
-        [
-          ">",
-          [
-            "get",
-            "len"
-          ],
-          5000
-        ],
-        12,
-        [
-          ">",
-          [
-            "get",
-            "len"
-          ],
-          2500
-        ],
-        13,
-        [
-          ">",
-          [
-            "get",
-            "len"
-          ],
-          1000
-        ],
-        14,
-        true
-      ],
-      [
-        "step",
-        [
-          "pitch"
-        ],
-        true,
-        50,
-        [
-          "<",
-          [
-            "distance-from-center"
-          ],
-          2
-        ],
-        60,
-        [
-          "<",
-          [
-            "distance-from-center"
-          ],
-          2.5
-        ],
-        70,
-        [
-          "<",
-          [
-            "distance-from-center"
-          ],
-          3
-        ]
-      ]
-    ],
-    "type": "symbol",
-    "source": "composite",
-    "id": "road-number-shield",
-    "paint": {
-      "text-color": [
-        "case",
-        [
-          "has",
-          "shield_beta"
-        ],
-        [
-          "case",
-          [
-            "all",
-            [
-              "has",
-              "shield_text_color_beta"
-            ],
-            [
-              "to-boolean",
-              [
-                "coalesce",
+    },
+    "sources": {
+        "composite": {
+            "url": "mapbox://mapbox.mapbox-streets-v8",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/pulmap/cm739duv3004501r00lq848jg/draft",
+    "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
+    "projection": {"name": "globe"},
+    "layers": [
+        {
+            "id": "road-number-shield",
+            "type": "symbol",
+            "source": "composite",
+            "source-layer": "road",
+            "minzoom": 6,
+            "filter": [
+                "all",
                 [
-                  "image",
-                  [
-                    "concat",
-                    [
-                      "get",
-                      "shield_beta"
-                    ],
-                    "-",
-                    [
-                      "to-string",
-                      [
-                        "get",
-                        "reflen"
-                      ]
-                    ]
-                  ]
+                    "case",
+                    ["has", "reflen"],
+                    ["<=", ["get", "reflen"], 6],
+                    ["has", "shield_beta"]
                 ],
-                ""
-              ]
-            ]
-          ],
-          [
-            "match",
-            [
-              "get",
-              "shield_text_color_beta"
+                [
+                    "match",
+                    ["get", "class"],
+                    ["pedestrian", "service"],
+                    false,
+                    true
+                ],
+                [
+                    "step",
+                    ["zoom"],
+                    ["==", ["geometry-type"], "Point"],
+                    11,
+                    [">", ["get", "len"], 5000],
+                    12,
+                    [">", ["get", "len"], 2500],
+                    13,
+                    [">", ["get", "len"], 1000],
+                    14,
+                    true
+                ],
+                [
+                    "step",
+                    ["pitch"],
+                    true,
+                    50,
+                    ["<", ["distance-from-center"], 2],
+                    60,
+                    ["<", ["distance-from-center"], 2.5],
+                    70,
+                    ["<", ["distance-from-center"], 3]
+                ]
             ],
-            "white",
-            "hsl(0, 0%, 100%)",
-            "yellow",
-            "hsl(50, 100%, 70%)",
-            "orange",
-            "hsl(25, 100%, 75%)",
-            "blue",
-            "hsl(230, 57%, 44%)",
-            "red",
-            "hsl(0, 87%, 59%)",
-            "green",
-            "hsl(140, 74%, 37%)",
-            "hsl(230, 18%, 13%)"
-          ],
-          "hsl(230, 18%, 13%)"
-        ],
-        [
-          "match",
-          [
-            "get",
-            "shield_text_color"
-          ],
-          "white",
-          "hsl(0, 0%, 100%)",
-          "yellow",
-          "hsl(50, 100%, 70%)",
-          "orange",
-          "hsl(25, 100%, 75%)",
-          "blue",
-          "hsl(230, 57%, 44%)",
-          "red",
-          "hsl(0, 87%, 59%)",
-          "green",
-          "hsl(140, 74%, 37%)",
-          "hsl(230, 18%, 13%)"
-        ]
-      ]
-    },
-    "source-layer": "road"
-  }
-]
+            "layout": {
+                "text-size": 9,
+                "icon-image": [
+                    "case",
+                    ["has", "shield_beta"],
+                    [
+                        "coalesce",
+                        [
+                            "image",
+                            [
+                                "concat",
+                                ["get", "shield_beta"],
+                                "-",
+                                ["to-string", ["get", "reflen"]]
+                            ]
+                        ],
+                        [
+                            "image",
+                            [
+                                "concat",
+                                ["get", "shield"],
+                                "-",
+                                ["to-string", ["get", "reflen"]]
+                            ]
+                        ],
+                        [
+                            "image",
+                            [
+                                "concat",
+                                "default-",
+                                ["to-string", ["get", "reflen"]]
+                            ]
+                        ]
+                    ],
+                    [
+                        "concat",
+                        ["get", "shield"],
+                        "-",
+                        ["to-string", ["get", "reflen"]]
+                    ]
+                ],
+                "icon-rotation-alignment": "viewport",
+                "text-max-angle": 38,
+                "symbol-spacing": [
+                    "interpolate",
+                    ["linear"],
+                    ["zoom"],
+                    11,
+                    400,
+                    14,
+                    600
+                ],
+                "text-font": ["DIN Pro Bold", "Arial Unicode MS Bold"],
+                "symbol-placement": ["step", ["zoom"], "point", 11, "line"],
+                "text-rotation-alignment": "viewport",
+                "text-field": ["get", "ref"],
+                "text-letter-spacing": 0.05
+            },
+            "paint": {
+                "text-color": [
+                    "case",
+                    ["has", "shield_beta"],
+                    [
+                        "case",
+                        [
+                            "all",
+                            ["has", "shield_text_color_beta"],
+                            [
+                                "to-boolean",
+                                [
+                                    "coalesce",
+                                    [
+                                        "image",
+                                        [
+                                            "concat",
+                                            ["get", "shield_beta"],
+                                            "-",
+                                            ["to-string", ["get", "reflen"]]
+                                        ]
+                                    ],
+                                    ""
+                                ]
+                            ]
+                        ],
+                        [
+                            "match",
+                            ["get", "shield_text_color_beta"],
+                            "white",
+                            "hsl(0, 0%, 100%)",
+                            "yellow",
+                            "hsl(50, 100%, 70%)",
+                            "orange",
+                            "hsl(25, 100%, 75%)",
+                            "blue",
+                            "hsl(230, 57%, 44%)",
+                            "red",
+                            "hsl(0, 87%, 59%)",
+                            "green",
+                            "hsl(140, 74%, 37%)",
+                            "hsl(230, 18%, 13%)"
+                        ],
+                        "hsl(230, 18%, 13%)"
+                    ],
+                    [
+                        "match",
+                        ["get", "shield_text_color"],
+                        "white",
+                        "hsl(0, 0%, 100%)",
+                        "yellow",
+                        "hsl(50, 100%, 70%)",
+                        "orange",
+                        "hsl(25, 100%, 75%)",
+                        "blue",
+                        "hsl(230, 57%, 44%)",
+                        "red",
+                        "hsl(0, 87%, 59%)",
+                        "green",
+                        "hsl(140, 74%, 37%)",
+                        "hsl(230, 18%, 13%)"
+                    ]
+                ]
+            }
+        }
+    ],
+    "created": "2025-02-13T11:30:48.063Z",
+    "modified": "2025-02-13T11:45:04.997Z",
+    "id": "cm739duv3004501r00lq848jg",
+    "owner": "pulmap",
+    "visibility": "private",
+    "protected": false,
+    "draft": true
+}
