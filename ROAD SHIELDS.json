@@ -1,0 +1,314 @@
+[
+  {
+    "minzoom": 6,
+    "layout": {
+      "text-size": 9,
+      "icon-image": [
+        "case",
+        [
+          "has",
+          "shield_beta"
+        ],
+        [
+          "coalesce",
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "shield_beta"
+              ],
+              "-",
+              [
+                "to-string",
+                [
+                  "get",
+                  "reflen"
+                ]
+              ]
+            ]
+          ],
+          [
+            "image",
+            [
+              "concat",
+              [
+                "get",
+                "shield"
+              ],
+              "-",
+              [
+                "to-string",
+                [
+                  "get",
+                  "reflen"
+                ]
+              ]
+            ]
+          ],
+          [
+            "image",
+            [
+              "concat",
+              "default-",
+              [
+                "to-string",
+                [
+                  "get",
+                  "reflen"
+                ]
+              ]
+            ]
+          ]
+        ],
+        [
+          "concat",
+          [
+            "get",
+            "shield"
+          ],
+          "-",
+          [
+            "to-string",
+            [
+              "get",
+              "reflen"
+            ]
+          ]
+        ]
+      ],
+      "icon-rotation-alignment": "viewport",
+      "text-max-angle": 38,
+      "symbol-spacing": [
+        "interpolate",
+        [
+          "linear"
+        ],
+        [
+          "zoom"
+        ],
+        11,
+        400,
+        14,
+        600
+      ],
+      "text-font": [
+        "DIN Pro Bold",
+        "Arial Unicode MS Bold"
+      ],
+      "symbol-placement": [
+        "step",
+        [
+          "zoom"
+        ],
+        "point",
+        11,
+        "line"
+      ],
+      "text-rotation-alignment": "viewport",
+      "text-field": [
+        "get",
+        "ref"
+      ],
+      "text-letter-spacing": 0.05
+    },
+    "filter": [
+      "all",
+      [
+        "case",
+        [
+          "has",
+          "reflen"
+        ],
+        [
+          "<=",
+          [
+            "get",
+            "reflen"
+          ],
+          6
+        ],
+        [
+          "has",
+          "shield_beta"
+        ]
+      ],
+      [
+        "match",
+        [
+          "get",
+          "class"
+        ],
+        [
+          "pedestrian",
+          "service"
+        ],
+        false,
+        true
+      ],
+      [
+        "step",
+        [
+          "zoom"
+        ],
+        [
+          "==",
+          [
+            "geometry-type"
+          ],
+          "Point"
+        ],
+        11,
+        [
+          ">",
+          [
+            "get",
+            "len"
+          ],
+          5000
+        ],
+        12,
+        [
+          ">",
+          [
+            "get",
+            "len"
+          ],
+          2500
+        ],
+        13,
+        [
+          ">",
+          [
+            "get",
+            "len"
+          ],
+          1000
+        ],
+        14,
+        true
+      ],
+      [
+        "step",
+        [
+          "pitch"
+        ],
+        true,
+        50,
+        [
+          "<",
+          [
+            "distance-from-center"
+          ],
+          2
+        ],
+        60,
+        [
+          "<",
+          [
+            "distance-from-center"
+          ],
+          2.5
+        ],
+        70,
+        [
+          "<",
+          [
+            "distance-from-center"
+          ],
+          3
+        ]
+      ]
+    ],
+    "type": "symbol",
+    "source": "composite",
+    "id": "road-number-shield",
+    "paint": {
+      "text-color": [
+        "case",
+        [
+          "has",
+          "shield_beta"
+        ],
+        [
+          "case",
+          [
+            "all",
+            [
+              "has",
+              "shield_text_color_beta"
+            ],
+            [
+              "to-boolean",
+              [
+                "coalesce",
+                [
+                  "image",
+                  [
+                    "concat",
+                    [
+                      "get",
+                      "shield_beta"
+                    ],
+                    "-",
+                    [
+                      "to-string",
+                      [
+                        "get",
+                        "reflen"
+                      ]
+                    ]
+                  ]
+                ],
+                ""
+              ]
+            ]
+          ],
+          [
+            "match",
+            [
+              "get",
+              "shield_text_color_beta"
+            ],
+            "white",
+            "hsl(0, 0%, 100%)",
+            "yellow",
+            "hsl(50, 100%, 70%)",
+            "orange",
+            "hsl(25, 100%, 75%)",
+            "blue",
+            "hsl(230, 57%, 44%)",
+            "red",
+            "hsl(0, 87%, 59%)",
+            "green",
+            "hsl(140, 74%, 37%)",
+            "hsl(230, 18%, 13%)"
+          ],
+          "hsl(230, 18%, 13%)"
+        ],
+        [
+          "match",
+          [
+            "get",
+            "shield_text_color"
+          ],
+          "white",
+          "hsl(0, 0%, 100%)",
+          "yellow",
+          "hsl(50, 100%, 70%)",
+          "orange",
+          "hsl(25, 100%, 75%)",
+          "blue",
+          "hsl(230, 57%, 44%)",
+          "red",
+          "hsl(0, 87%, 59%)",
+          "green",
+          "hsl(140, 74%, 37%)",
+          "hsl(230, 18%, 13%)"
+        ]
+      ]
+    },
+    "source-layer": "road"
+  }
+]
